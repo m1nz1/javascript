@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>환율계산기</title>
+    <style> 
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    </style>
+
+    <script>
+       const dollar = prompt('환전하고자 하는 달러를 입력해주세요.','1')
+       
+       const ex1 = 1313
+       const won = Number (dollar) * ex1
+       console.log(`환전하실 ${dollar} 달러는 ${won}원 입니다.`)
+       document.write(` <h1> '한국' 환전하실 ${dollar}달러는 ${won}원 입니다.</h1> `)
+     
+    
+       const ex2 = 133
+       const yen = Number (dollar) * ex2
+       console.log(`환전하실 ${dollar} 달러는 ${yen}엔 입니다.`)
+       document.write(` <h1>'일본' 환전하실 ${dollar}달러는 ${yen}엔 입니다.</h1> `)
+    
+       const ex3 = 6
+       const yuan = Number (dollar) * ex3
+       console.log(`환전하실 ${dollar} 달러는 ${yuan}위안 입니다.`)
+       document.write(` <h1>'중국' 환전하실 ${dollar}달러는 ${yuan}위안 입니다.</h1> `)
+
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

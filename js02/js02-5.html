@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+    table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 1000px;
+    height: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+   
+    }
+    tr td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    font-size: 25px;
+    }
+
+    tr:nth-child(odd){
+        background-color: rgb(245, 210, 245);
+    }
+
+    </style>
+     
+    <script>
+        // 국어점수, 수학점수, 과학점수 를 입력받는다.
+        // 그리고 3과목의 평균 점수를 출력 한다.
+        // 국어점수가 70점 이상이고 
+        // 수학점수가 50점 초과이며
+        // 과학점수가 80점 이상이면
+        // 화면에 true를 표시한다.
+
+        const kr = prompt('국어점수 를 입력해 주세요')*1
+        const mr = prompt('수학점수 를 입력해 주세요')*1
+        const sr = prompt('과학점수 를 입력해 주세요')*1
+
+        const hh = (kr+mr+sr)/3
+        const kk = (kr>=70)&&(mr>50)&&(sr>=80)
+        console.log(hh)
+
+
+    
+        let list = "";
+        list +=`<table>    `
+        list +=`<tr>`
+        list +=`    <td>결과</td>`
+        list +=`    <td>국어</td>`
+        list +=`    <td>수학</td>`
+        list +=`    <td>과학</td>`
+        list +=`    <td>평균</td>`
+        list +=`</tr>`
+        list +=`<tr>`
+        list +=`    <td>${kk}</td>`
+        list +=`    <td>${kr}</td>`
+        list +=`    <td>${mr}</td>`
+        list +=`    <td>${sr}</td>`
+        list +=`    <td>${hh}</td>`
+        list +=`</tr> `
+        list +=`</table> `
+        document.write(list)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

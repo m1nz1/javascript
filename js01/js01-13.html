@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/01-13.css">
+  
+    <script>
+    let input = prompt('true 또는 false 값을 입력하세요');
+    
+    let list = input;
+        list += '<h1>논리 연산자</h1>';
+        list += '<h3>입력하신 false 에 대한 결과를 표로 나타내면</h3> '
+        list +=`<table><tr><th>&&연산</th><th>연산</th><th>값</th><th>결과</th></tr>`
+        list +=`<tr><td>${input}</td><td>&&</td><td>false</td><td>${input}</td></tr>`
+        list +=`<tr><td>${input}</td><td>&&</td><td>true</td><td>${input}</td></tr>`
+        list +=`<tr><th>||연산</th><th>연산</th><th>값</th><th>결과</th></tr>`
+        list +=`<tr><td>${input}</td><td>||</td><td>false</td><td>${input}</td></tr>`
+        list +=`<tr><td>${input}</td><td>||</td><td>true</td><td>${input}</td></tr></table>`
+        document.write(list)
+    </script>
+
+</head>
+<body>
+
+
+
+</body>
+</html>
