@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        const my = prompt('돈을 입력하세요','')
+        
+
+    let ow = parseInt(my / 50000); // 오만원짜리 개수
+    let mw = parseInt(my / 10000); // 만원짜리 개수
+    let cw = parseInt((my % 10000) / 1000); // 천원짜리 개수
+    let bw = parseInt((my % 1000) / 100); // 백원짜리 개수
+    let sw = parseInt((my % 100) / 10); // 십원짜리 개수
+    
+
+    alert(`5만원 ${ow}1만원: ${mw}장, 1천원: ${cw}장, 
+            1백원: ${bw}개, 10원: ${sw}개`);
+        
+        
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>잔돈</th>
+            <th>개수</th>
+        </tr>
+        <tr>
+            <td>5만원권</td>
+            <td>${}</td>
+        </tr>
+        <tr>
+            <td>1만원권</td>
+            <td>${}</td>
+        </tr>
+        <tr>
+            <td>5천원권</td>
+            <td>${}</td>
+        </tr>
+        <tr>
+            <td>1천원권</td>
+            <td>${}</td>
+        </tr>
+        <tr>
+            <td>5백원</td>
+            <td>${}</td>
+        </tr>
+        <tr>
+            <td>1백원</td>
+            <td>${}</td>
+        </tr>
+        <tr>
+            <td>50원</td>
+            <td>${}</td>
+        </tr>
+        <tr>
+            <td>10원</td>
+            <td>${}</td>
+        </tr>
+
+
+    </table>
+</body>
+</html>
