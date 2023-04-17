@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const 과일목록 = ['딸기','바나나','사과','수박','배','키위','복숭아','포도']
+        const input = prompt(`${과일목록}중 제거하고 싶은 과일을 입력하세요.`)
+        const input2 = prompt(`${과일목록}중 추가하고 싶은 과일을 입력하세요.`)
+        // console.log( 과일목록.splice(과일목록.indexOf(input),1))
+        console.log( 과일목록.splice(과일목록.indexOf(input),1))
+        console.log( 과일목록.splice(과일목록.length-2,0,input2))
+        document.write(`<h1>요청하신 ${input}을 제거한 품목은 ${과일목록} 입니다.</h1>`)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
