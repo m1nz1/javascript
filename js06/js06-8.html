@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보 게임</title>
+    <script>
+        //가위바위보 중에 하나를 입력받고 게임을 한다.
+        //이기면 승 비기면 비김 지면 졌다고 표현되어야한다.
+        // 축하메세지 사용하기
+        //게임하는 동안 승률 표기하기 ex) 3:1 75% 표현
+        const ran =  Math.floor(Math.random()*3)
+        const rsp = prompt("'가위','바위','보' 중에 하나를 입력해주세요!" +ran)*1
+            console.log(rsp)
+        
+        for( i = 0; i < 3; i++ ){
+            
+            if(ran === rsp){
+                alert('비겼습니다============!!')
+            }
+            else if(ran < rsp){
+                alert('이겼습니다!!!!!!!!!!')
+            }
+            else if(ran > rsp){
+                alert('졌습니다ㅜㅜ....')
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
