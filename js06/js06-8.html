@@ -10,22 +10,61 @@
         //이기면 승 비기면 비김 지면 졌다고 표현되어야한다.
         // 축하메세지 사용하기
         //게임하는 동안 승률 표기하기 ex) 3:1 75% 표현
-        const ran =  Math.floor(Math.random()*3)
-        const rsp = prompt("'가위','바위','보' 중에 하나를 입력해주세요!" +ran)*1
-            console.log(rsp)
         
         for( i = 0; i < 3; i++ ){
+            const rsp = prompt("'가위','바위','보' 중에 하나를 입력해주세요!" )
+            console.log(`%c나 :${rsp}`,"color : red;")
+
+            let ran =  Math.floor(Math.random()*3)
             
-            if(ran === rsp){
-                alert('비겼습니다============!!')
+            switch(ran){
+                case  0:{
+                    ran ='가위'
+                    break
+                }
+                case  1:{
+                    ran ='바위'
+                    break
+                }
+                case  2:{
+                    ran ='보'
+                    break
+                }
+            }  console.log(`%c컴퓨터 : ${ran}`,"color : blue;")   
+            
+                switch (rsp) {
+                    case '가위':{
+                     if(ran == '가위'){
+                        alert('컴퓨터: 가위 \n사용자: 가위 \n비겼습니다~~~~~~~~~~~!')
+                     } else if(ran == '바위'){
+                        alert('컴퓨터: 바위 \n사용자: 가위 \n졌습니다ㅠㅠㅠㅠㅜㅜㅜㅠㅠ')
+                     }else if(ran == '보'){
+                        alert('컴퓨터: 보 \n사용자: 가위 \n☆★☆★☆★이겼습니다☆★☆★☆★')
+                     }
+                    } break;
+                    
+                    case '바위':{
+                     if(ran == '가위'){
+                        alert('컴퓨터: 가위 \n사용자: 바위 \n☆★☆★☆★이겼습니다☆★☆★☆★')
+                     } else if(ran == '바위'){
+                        alert('컴퓨터: 바위 \n사용자: 바위 \n비겼습니다~~~~~~~~~~~!')
+                     }else if(ran == '보'){
+                        alert('컴퓨터: 보 \n사용자: 바위 \n졌습니다ㅠㅠㅜㅜㅜㅜㅠㅠㅠㅠ')
+                     }
+                    } break;
+                    case '보':{
+                     if(ran == '가위'){
+                        alert('컴퓨터: 가위 \n사용자: 보 \n졌습니다ㅠㅠㅠㅠㅡㅜㅡㅜㅜㅠ')
+                     } else if(ran == '바위'){
+                        alert('컴퓨터: 바위 \n사용자: 보 \n☆★☆★☆★이겼습니다☆★☆★☆★')
+                     }else if(ran == '보'){
+                        alert('컴퓨터: 보 \n사용자: 보 \n비겼습니다~~~~~~~~~~~~~!')
+                     }
+                    } break;
+               
+                }
             }
-            else if(ran < rsp){
-                alert('이겼습니다!!!!!!!!!!')
-            }
-            else if(ran > rsp){
-                alert('졌습니다ㅜㅜ....')
-            }
-        }
+        
     </script>
 </head>
 <body>
