@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //1부터 45까지의 번호 중 3개를 랜덤하게 뽑아내어 배열에 넣으시오 
+        
+        let a1=[]
+    
+        for(let i =0;i<3;i++){
+            const array = new Uint8Array(3);
+            crypto.getRandomValues(array);
+            const ran = array[0]%45+1
+            a1[i] = ran
+           
+     
+        // if(ran == a1[0]){
+        //     console.log(`${ran}`)
+        // }
+        // if(ran == a2[1]){
+        //     console.log(`${ran}`)
+        // }
+        // if(ran == a3[3]){
+        //     console.log(`${ran}`)
+        // }
+        
+    }   
+    console.log(a1)
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
