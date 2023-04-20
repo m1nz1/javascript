@@ -5,6 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>주사위 게임</title>
+    <style>
+    table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+   
+    
+    }
+    tr td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: rgb(189, 153, 232);
+    }
+
+    </style>
     <script>
         //10만번을 주사위를 던져서
         //1에서6까지 몇번나오는지 기록하고 
@@ -16,6 +39,7 @@
        
         
         let  일 = 이 = 삼 = 사 = 오 = 육 = 0
+        const total = 100000;
         for(i=0;i<100000;i++){
             // const ran =  Math.floor(Math.random()*6)+1
             const array = new Uint32Array(2);
@@ -42,15 +66,53 @@
             }
 
         }   
-            console.log(일)
-            console.log(이)
-            console.log(삼)
-            console.log(사)
-            console.log(오)
-            console.log(육)
+            console.log(`1이 나올 확률: ${일/total*100}%`)
+            console.log(`2이 나올 확률: ${이/total*100}%`)
+            console.log(`3이 나올 확률: ${삼/total*100}%`)
+            console.log(`4이 나올 확률: ${사/total*100}%`)
+            console.log(`5이 나올 확률: ${오/total*100}%`)
+            console.log(`6이 나올 확률: ${육/total*100}%`)
             console.log(일+이+삼+사+오+육)
             
-
+   
+               
+           let list = '';
+               list +=`<table><tr>`
+               list +=`    <th>주사위</th>`
+               list +=`    <th>횟수</th>`
+               list +=`    <th>확률</th>`
+               list +=`</tr>`
+               list +=`<tr>`
+               list +=`    <td>1</td>`
+               list +=`    <td>${일}</td>`
+               list +=`    <td>${total}</td>`
+               list +=`</tr>`
+               list +=`<tr>`
+               list +=`    <td>2</td>`
+               list +=`    <td>${이}</td>`
+               list +=`    <td>${total}</td>`
+               list +=`</tr>`
+               list +=`<tr>`
+               list +=`    <td>3</td>`
+               list +=`    <td>${삼}</td>`
+               list +=`    <td>${total}</td>`
+               list +=`</tr>`
+               list +=`<tr>`
+               list +=`    <td>4</td>`
+               list +=`    <td>${사}</td>`
+               list +=`    <td>${total}</td>`
+               list +=`</tr>`
+               list +=`<tr>`
+               list +=`    <td>5</td>`
+               list +=`    <td>${오}</td>`
+               list +=`    <td>${total}</td>`
+               list +=`</tr>`
+               list +=`<tr>`
+               list +=`    <td>6</td>`
+               list +=`    <td>${육}</td>`
+               list +=`    <td>${total}</td>`
+               list +=`</tr></table>`
+               document.write(list) 
 
   
         // // let  일 = 이 = 삼 = 사 = 오 = 육 = 0 < 이렇게도 할 수 있다.
@@ -71,11 +133,10 @@
 
         // for(let j=0; j<aa.length-1;j++ )(aa[6]+=aa[j])
         //  console.log(aa)
-            
-
+ 
     </script>
 </head>
 <body>
-    
+
 </body>
 </html>
