@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{ 
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .box{
+            border: 1px solid black;
+            height: 20px;
+            width: 200px;
+         
+        }
+        .box1{ 
+            border: 1px solid black;
+            width: 25px;
+            height: 25px;
+        }
+        .box1:nth-child(-n+6){
+            background-color: rgb(154, 79, 225);
+        }
+        .box1:nth-child(n+7):nth-child(-n+10){
+            background-color: rgb(147, 203, 238);
+        }
+        .box1:nth-child(n+11):nth-child(-n+14){
+            background-color: rgb(255, 255, 0);
+        }
+        .box1:nth-child(n+15):nth-child(-n+17){
+            background-color: rgb(255, 177, 89);
+        }
+        .box1:nth-child(n+18):nth-child(-n+23){
+            background-color: rgb(255, 0, 0);
+        }
+        .box2{
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-size: 15px;
+            text-align: center;
+        }
+    </style>
+    
+    <script>
+        const ond = prompt('현재 온도를 입력해주세요~')*1
+        // for(){
+
+        // }
+        if(ond >= 32){
+            alert('정상온도를 벗어났습니다.')
+        }if(28 <= ond && ond < 32 ){
+            alert('갑갑하네요')
+        }if(22 <= ond && ond < 28){
+            alert('보통이에요')
+        }if(16 <= ond && ond < 22){
+            alert('시원하네요')
+        }if(16 >= ond ){
+            alert('정상온도를 벗어났습니다.')
+        }
+         
+
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th class="box" colspan="6">16미만</th>
+            <th class="box" colspan="4">16이상~22미만</th>
+            <th class="box" colspan="4">22이상~28미만</th>
+            <th class="box" colspan="3">28이상~32미만</th>
+            <th class="box" colspan="6">32~이상</th>
+        </tr>
+        <tr>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td> 
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td>
+            <td class="box1"></td> 
+            <td class="box1"></td>
+        </tr>
+        <tr>
+            <td class="box2" colspan="6">정상온도를 벗어났습니다</td>
+            <td class="box2" colspan="4">시원하네요</td>
+            <td class="box2" colspan="4">보통이네요</td>
+            <td class="box2" colspan="3">갑갑하네요</td>
+            <td class="box2" colspan="6">정상온도를 벗어났습니다</td>
+         </tr>
+    </table>
+</body>
+</html>

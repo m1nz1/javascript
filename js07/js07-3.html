@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또</title>
+    <script>
+        //1부터 45까지의 수중 랜덤하게 3개를 뽑아 배열에 넣으시오
+        //위에서 뽑은 세가지의 수를 본인이 만든 알고리즘으로 번호를
+        //오름차순 순서대로 나열하라 ex) 13 , 17 ,33 
+        // 반복문 ,제어문 , 배열
+        //for(){} if(){} array[]
+
+        
+        // for(let i =0;i<3;i++){
+            //     const array = new Uint8Array(3);
+            //     crypto.getRandomValues(array);
+            //     const ran = array[0]%45+1
+            //     a1[i] = ran
+            // } 
+        const arr = []
+        for(i=0;i<3;i++){
+            const ran=Math.floor(Math.random()*45)+1
+            arr.push(ran)}
+        console.log(arr)
+
+        let temp
+        for(let k = 0;k<10000;k++){
+        if(arr[0] < arr[1] && arr[1] < arr[2])break
+        if(arr[0]>arr[1]){
+            temp=arr[0]
+            arr[0]=arr[1]
+            arr[1]=temp   }               
+         if(arr[1]>arr[2]){
+            temp=arr[1]
+            arr[1]=arr[2]
+            arr[2]=temp                  
+         } 
+        }
+        console.log(arr)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
