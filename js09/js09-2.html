@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 1부터45까지 임의의 수 6자리를 중복없이 
+        뽑아 차례로 나열하여 배열에 그 값을 넣으시오
+        위의 배열을 10000개 준비하여 각 번호별로 나온 수을 카운팅하라.*/
+//         let 일 = 이 = 삼 = 사 = 오 = 육 =0
+//         function aa(){
+//             const arr = []
+//             while(arr.length<6){
+//                 const ran = Math.floor(Math.random()*45+1)
+//                 if(!arr.includes(ran))arr.push(ran)
+            
+//             if(ran == 1){
+//                 일++
+//             }
+//             if(ran == 2){
+//                 이++
+//             }
+//             if(ran == 3){
+//                 삼++
+//             }
+//             if(ran == 4){
+//                 사++
+//             }
+//             if(ran == 5){
+//                 오++
+//             }
+//             if(ran == 6){
+//                 육++
+//             }
+//         }
+//             console.log(arr.sort((a,b)=>(a-b)))
+            
+//         }
+//         for(let i=0;i<10000;i++){
+//             console.log(i+1)
+//             aa()
+            
+//         }
+        
+        
+//         console.log(` 1 나온 횟수 : ${일}`)
+//         console.log(` 2 나온 횟수 : ${이}`)
+//         console.log(` 3 나온 횟수 : ${삼}`)
+//         console.log(` 4 나온 횟수 : ${사}`)
+//         console.log(` 5 나온 횟수 : ${오}`)
+//         console.log(` 6 나온 횟수 : ${육}`)
+ 
+//   </script>
+
+  <script>
+   let bb = [0,0,0,0,0,0,0,0,0,0,
+               0,0,0,0,0,0,0,0,0,0,
+               0,0,0,0,0,0,0,0,0,0,
+               0,0,0,0,0,0,0,0,0,0,
+               0,0,0,0,0,]
+
+     function aa(){
+            const arr = []
+            while(arr.length<6){
+                const ran = Math.floor(Math.random()*45+1)
+                if(!arr.includes(ran))arr.push(ran)
+            }
+            console.log(arr.sort((a,b)=>(a-b)))
+            
+            for(let j=0;j<bb.length;j++){
+                       
+    
+            }
+        }
+        
+        
+        for(let i=0;i<50;i++){
+            console.log(i+1)
+            aa()
+            
+        }
+        
+        
+     
+ 
+
+
+  </script>
+</head>
+<body>
+    
+</body>
+</html>
