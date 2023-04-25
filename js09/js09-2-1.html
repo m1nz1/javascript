@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid black;
+
+        }
+        tr th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align:center;
+            table-layout: fixed;
+            background-color: rgb(255, 210, 229);
+        }
+            
+        tr td {
+            border: 1px solid black;
+            padding: 10px;
+            table-layout: fixed;
+            text-align:center;
+        }
+
+
+    </style>
+    <script>
+        /* 1부터45까지 임의의 수 6자리를 중복없이 
+        뽑아 차례로 나열하여 배열에 그 값을 넣으시오
+        위의 배열을 10000개 준비하여 각 번호별로 나온 수을 카운팅하라.*/
+        // let a1 = a2 = a3 = a4 = a5 = a6 = a7 = a8 = a9 = a10
+        //     b11 = b12 = b13 = b14 = b15 = b16 = b17 = b18 = b19 = b20 =0
+
+        const momo = []
+        for(let k = 0; k < 46; k++){
+                momo.push(0)
+            }
+        function aa1(){
+            const arr = []
+        while(arr.length<6){
+                const ran = Math.floor(Math.random()*45+1)
+                if(!arr.includes(ran))arr.push(ran)
+            } console.log(arr.sort((a,b)=>(a-b)))
+            
+        for(let j=0;j<6;j++){momo[arr[j]]++}
+        }
+
+        for(let i=0;i<1000;i++){
+            console.log(i+1)
+            aa1()
+        }
+
+        console.log(` 나온 횟수 : ${momo}`)
+       
+    let list = ''      
+        list +=`<table>`
+        list +=`<tr>`
+        list +=`    <th>숫자</th>`    
+        list +=`    <th>1</th>`
+        list +=`    <th>2</th>`
+        list +=`    <th>3</th>`
+        list +=`    <th>4</th>`
+        list +=`    <th>5</th>`
+        list +=`    <th>6</th>`
+        list +=`    <th>7</th>`
+        list +=`    <th>8</th>`
+        list +=`    <th>9</th>`
+        list +=`    <th>10</th>`
+        list +=`    <th>11</th>`
+        list +=`    <th>12</th>`
+        list +=`    <th>13</th>`
+        list +=`    <th>14</th>`
+        list +=`    <th>15</th>`
+        list +=`    <th>16</th>`
+        list +=`    <th>17</th>`
+        list +=`    <th>18</th>`
+        list +=`    <th>19</th>`
+        list +=`    <th>20</th>`
+        list +=`    <th>21</th>`
+        list +=`    <th>22</th>`
+        list +=`    <th>23</th>`
+        list +=`    <th>24</th>`
+        list +=`    <th>25</th>`
+        list +=`    <th>26</th>`
+        list +=`    <th>27</th>`
+        list +=`    <th>28</th>`
+        list +=`    <th>29</th>`
+        list +=`    <th>30</th>`
+        list +=`    <th>31</th>`
+        list +=`    <th>32</th>`
+        list +=`    <th>33</th>`
+        list +=`    <th>34</th>`
+        list +=`    <th>35</th>`
+        list +=`    <th>36</th>`
+        list +=`    <th>37</th>`
+        list +=`    <th>38</th>`
+        list +=`    <th>39</th>`
+        list +=`    <th>40</th>`
+        list +=`    <th>41</th>`
+        list +=`    <th>42</th>`
+        list +=`    <th>43</th>`
+        list +=`    <th>44</th>`
+        list +=`    <th>45</th>`
+        list +=`</tr>`
+        list +=`<tr>`
+        list +=`    <td>횟수</td>`
+        list +=`    <td>${momo[1]}</td>`
+        list +=`    <td>${momo[2]}</td>`
+        list +=`    <td>${momo[3]}</td>`
+        list +=`    <td>${momo[4]}</td>`
+        list +=`    <td>${momo[5]}</td>`
+        list +=`    <td>${momo[6]}</td>`
+        list +=`    <td>${momo[7]}</td>`
+        list +=`    <td>${momo[8]}</td>`
+        list +=`    <td>${momo[9]}</td>`
+        list +=`    <td>${momo[10]}</td>`
+        list +=`    <td>${momo[11]}</td>`
+        list +=`    <td>${momo[12]}</td>`
+        list +=`    <td>${momo[13]}</td>`
+        list +=`    <td>${momo[14]}</td>`
+        list +=`    <td>${momo[15]}</td>`
+        list +=`    <td>${momo[16]}</td>`
+        list +=`    <td>${momo[17]}</td>`
+        list +=`    <td>${momo[18]}</td>`
+        list +=`    <td>${momo[19]}</td>`
+        list +=`    <td>${momo[20]}</td>`
+        list +=`    <td>${momo[21]}</td>`
+        list +=`    <td>${momo[22]}</td>`
+        list +=`    <td>${momo[23]}</td>`
+        list +=`    <td>${momo[24]}</td>`
+        list +=`    <td>${momo[25]}</td>`
+        list +=`    <td>${momo[26]}</td>`
+        list +=`    <td>${momo[27]}</td>`
+        list +=`    <td>${momo[28]}</td>`
+        list +=`    <td>${momo[29]}</td>`
+        list +=`    <td>${momo[30]}</td>`
+        list +=`    <td>${momo[31]}</td>`
+        list +=`    <td>${momo[32]}</td>`
+        list +=`    <td>${momo[33]}</td>`
+        list +=`    <td>${momo[34]}</td>`
+        list +=`    <td>${momo[35]}</td>`
+        list +=`    <td>${momo[36]}</td>`
+        list +=`    <td>${momo[37]}</td>`
+        list +=`    <td>${momo[38]}</td>`
+        list +=`    <td>${momo[39]}</td>`
+        list +=`    <td>${momo[40]}</td>`
+        list +=`    <td>${momo[41]}</td>`
+        list +=`    <td>${momo[42]}</td>`
+        list +=`    <td>${momo[43]}</td>`
+        list +=`    <td>${momo[44]}</td>`
+        list +=`    <td>${momo[45]}</td>`
+        list +=`</tr>`
+        list +=`</table>`
+        document.write(list)
+
+
+   </script>
+
+</head>
+<body>
+
+</body>
+</html>

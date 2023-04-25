@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //구구단의 2~4단 까지 버튼을 만들고
+        //누르면 화면에 구구단 표가 보이도록 해라.
+        //그리고 다른 버튼을 누르면 다른 구구단도 내용이 바뀌어 보이게 해라.
+        
+    function a1 (){ 
+        for(i=2;i<3;i++){
+            for(j=1;j<10;j++){
+                document.write(`${i}X${j}=${i*j}`)
+            }
+        }
+    }
+    function a2 (){ 
+        for(i=3;i<4;i++){
+            for(j=1;j<10;j++){
+                document.write(`${i}X${j}=${i*j}`)
+            }
+        }
+    }
+    function a3 (){ 
+        for(i=4;i<5;i++){
+            for(j=1;j<10;j++){
+                document.write(`${i}X${j}=${i*j}`)
+            }
+        }
+    }
+    
+    </script>
+</head>
+<body>
+    <div onclick="a1()" style="border: 1px solid red;">2단</div>
+    <div onclick="a2()" style="border: 1px solid orangered;">3단</div>
+    <div onclick="a3()" style="border: 1px solid yellow">4단</div>
+
+<table><tr>
+    <td>${i} X ${j} = ${i*j}</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+</tr></table>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //중복없는 로또 번호 6자리 추천 
+        //오름차순으로 정렬
+        //1번 버튼에는 6자리 추천
+        //2번 버튼에는 오름차순 정렬
+      
+        const arr = []
+        function b1(){
+            for(;;){
+                if(arr.length==6)break;
+                let ran = Math.floor(Math.random()*45)+1
+                if(arr.indexOf(ran)===-1){
+                    arr.push(ran)
+                }
+            }
+            console.log(`%c${arr}`,'background-color: gray; font-size: 30px; color: red;')
+        }
+        function b2(){
+            console.log(`%c${arr.sort((a,b)=>a-b)}`,'background-color: gray; font-size: 30px; color: red;')
+        }
+  
+        
+
+
+
+        // let aa =[]
+        // for(let i=0;i<6;i++){
+        //     const ran = Math.floor(Math.random()*45+1)
+        //     aa.push(ran)
+        // for(let k=0; k<6; k++)aa[ran[k]-1]++
+
+        // }console.log(aa)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
