@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할인율 계산</title>
+  
+        <script>
+            let cm = 800000
+            let nt = 2200000
+            let tb = 800000
+            let sm = 2000000
+            let wi = 120000
+            let ki = 80000
+            let ma = 50000
+
+            function dc1(){
+                let list = ''
+                    list +=`<button onclick="dc1()" style="background-color: rgb(255, 53, 53); width: 100px;">10%</button>
+                            <button onclick="dc2()" style="background-color: rgb(245, 100, 47); width: 100px;">20%</button>
+                            <button onclick="dc3()" style="background-color: rgb(255, 255, 0); width: 100px;">30%</button>
+                            <button onclick="dc4()" style="background-color: rgb(78, 199, 78); width: 100px;">40%</button>`
+                    list +=`<table style="border: 1px solid black; border-collapse: collapse;width: 400px;text-align: center;">`
+                    list +=`<tr style="border: 1px solid black;"><td colspan="4" style="border: 1px solid black;">판매품목</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><th style="background-color: rgb(255, 222, 160); border: 1px solid black;">No.</th><th style="border: 1px solid black;">품목</th><th style="border: 1px solid black;">정가</th><th style="border: 1px solid black;">할인율</th></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">1</td><td style="border: 1px solid black;">컴퓨터</td><td style="border: 1px solid black;">800,000</td><td style="border: 1px solid black;">${cm*0.9}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">2</td><td style="border: 1px solid black;">노트북</td><td style="border: 1px solid black;">2,200,000</td><td style="border: 1px solid black;">${nt*0.9}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">3</td><td style="border: 1px solid black;">태블릿</td><td style="border: 1px solid black;">800,000</td><td style="border: 1px solid black;">${tb*0.9}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">4</td><td style="border: 1px solid black;">스마트폰</td><td style="border: 1px solid black;">2,000,000</td><td style="border: 1px solid black;">${sm*0.9}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">5</td><td style="border: 1px solid black;">공유기</td><td style="border: 1px solid black;">120,000</td><td style="border: 1px solid black;">${wi*0.9}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">6</td><td style="border: 1px solid black;">키보드</td><td style="border: 1px solid black;">80,000</td><td style="border: 1px solid black;">${ki*0.9}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">7</td><td style="border: 1px solid black;">마우스</td><td style="border: 1px solid black;">50,000</td><td style="border: 1px solid black;">${ma*0.9}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td colspan="2" style="border: 1px solid black;">합계</td><td style="border: 1px solid black;">6,050,000</td><td></td></tr>`
+                    list +=`</table>`
+                document.close()
+                document.write(list)
+            } 
+            function dc2(){
+                let list = ''
+                    list +=`<button onclick="dc1()" style="background-color: rgb(255, 53, 53); width: 100px;">10%</button>
+                            <button onclick="dc2()" style="background-color: rgb(245, 100, 47); width: 100px;">20%</button>
+                            <button onclick="dc3()" style="background-color: rgb(255, 255, 0); width: 100px;">30%</button>
+                            <button onclick="dc4()" style="background-color: rgb(78, 199, 78); width: 100px;">40%</button>`
+                    list +=`<table style="border: 1px solid black; border-collapse: collapse;width: 400px;text-align: center;">`
+                    list +=`<tr style="border: 1px solid black;"><td colspan="4" style="border: 1px solid black;">판매품목</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><th style="background-color: rgb(255, 222, 160); border: 1px solid black;">No.</th><th style="border: 1px solid black;">품목</th><th style="border: 1px solid black;">정가</th><th style="border: 1px solid black;">할인율</th></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">1</td><td style="border: 1px solid black;">컴퓨터</td><td style="border: 1px solid black;">800,000</td><td style="border: 1px solid black;">${cm*0.8}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">2</td><td style="border: 1px solid black;">노트북</td><td style="border: 1px solid black;">2,200,000</td><td style="border: 1px solid black;">${nt*0.8}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">3</td><td style="border: 1px solid black;">태블릿</td><td style="border: 1px solid black;">800,000</td><td style="border: 1px solid black;">${tb*0.8}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">4</td><td style="border: 1px solid black;">스마트폰</td><td style="border: 1px solid black;">2,000,000</td><td style="border: 1px solid black;">${sm*0.8}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">5</td><td style="border: 1px solid black;">공유기</td><td style="border: 1px solid black;">120,000</td><td style="border: 1px solid black;">${wi*0.8}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">6</td><td style="border: 1px solid black;">키보드</td><td style="border: 1px solid black;">80,000</td><td style="border: 1px solid black;">${ki*0.8}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">7</td><td style="border: 1px solid black;">마우스</td><td style="border: 1px solid black;">50,000</td><td style="border: 1px solid black;">${ma*0.8}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td colspan="2" style="border: 1px solid black;">합계</td><td style="border: 1px solid black;">6,050,000</td><td></td></tr>`
+                    list +=`</table>`
+                document.close()
+                document.write(list)
+            } 
+            function dc3(){
+                let list = ''
+                    list +=`<button onclick="dc1()" style="background-color: rgb(255, 53, 53); width: 100px;">10%</button>
+                            <button onclick="dc2()" style="background-color: rgb(245, 100, 47); width: 100px;">20%</button>
+                            <button onclick="dc3()" style="background-color: rgb(255, 255, 0); width: 100px;">30%</button>
+                            <button onclick="dc4()" style="background-color: rgb(78, 199, 78); width: 100px;">40%</button>`
+                    list +=`<table style="border: 1px solid black; border-collapse: collapse;width: 400px;text-align: center;">`
+                    list +=`<tr style="border: 1px solid black;"><td colspan="4" style="border: 1px solid black;">판매품목</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><th style="background-color: rgb(255, 222, 160); border: 1px solid black;">No.</th><th style="border: 1px solid black;">품목</th><th style="border: 1px solid black;">정가</th><th style="border: 1px solid black;">할인율</th></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">1</td><td style="border: 1px solid black;">컴퓨터</td><td style="border: 1px solid black;">800,000</td><td style="border: 1px solid black;">${cm*0.7}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">2</td><td style="border: 1px solid black;">노트북</td><td style="border: 1px solid black;">2,200,000</td><td style="border: 1px solid black;">${nt*0.7}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">3</td><td style="border: 1px solid black;">태블릿</td><td style="border: 1px solid black;">800,000</td><td style="border: 1px solid black;">${tb*0.7}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">4</td><td style="border: 1px solid black;">스마트폰</td><td style="border: 1px solid black;">2,000,000</td><td style="border: 1px solid black;">${sm*0.7}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">5</td><td style="border: 1px solid black;">공유기</td><td style="border: 1px solid black;">120,000</td><td style="border: 1px solid black;">${wi*0.7}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">6</td><td style="border: 1px solid black;">키보드</td><td style="border: 1px solid black;">80,000</td><td style="border: 1px solid black;">${ki*0.7}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">7</td><td style="border: 1px solid black;">마우스</td><td style="border: 1px solid black;">50,000</td><td style="border: 1px solid black;">${ma*0.7}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td colspan="2" style="border: 1px solid black;">합계</td><td style="border: 1px solid black;">6,050,000</td><td></td></tr>`
+                    list +=`</table>`
+                document.close() 
+                document.write(list)
+            } 
+            function dc4(){
+                let list = ''
+                    list +=`<button onclick="dc1()" style="background-color: rgb(255, 53, 53); width: 100px;">10%</button>
+                            <button onclick="dc2()" style="background-color: rgb(245, 100, 47); width: 100px;">20%</button>
+                            <button onclick="dc3()" style="background-color: rgb(255, 255, 0); width: 100px;">30%</button>
+                            <button onclick="dc4()" style="background-color: rgb(78, 199, 78); width: 100px;">40%</button>`
+                    list +=`<table style="border: 1px solid black; border-collapse: collapse;width: 400px;text-align: center;">`
+                    list +=`<tr style="border: 1px solid black;"><td colspan="4" style="border: 1px solid black;">판매품목</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><th style="background-color: rgb(255, 222, 160); border: 1px solid black;">No.</th><th style="border: 1px solid black;">품목</th><th style="border: 1px solid black;">정가</th><th style="border: 1px solid black;">할인율</th></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">1</td><td style="border: 1px solid black;">컴퓨터</td><td style="border: 1px solid black;">800,000</td><td style="border: 1px solid black;">${cm*0.6}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">2</td><td style="border: 1px solid black;">노트북</td><td style="border: 1px solid black;">2,200,000</td><td style="border: 1px solid black;">${nt*0.6}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">3</td><td style="border: 1px solid black;">태블릿</td><td style="border: 1px solid black;">800,000</td><td style="border: 1px solid black;">${tb*0.6}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">4</td><td style="border: 1px solid black;">스마트폰</td><td style="border: 1px solid black;">2,000,000</td><td style="border: 1px solid black;">${sm*0.6}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">5</td><td style="border: 1px solid black;">공유기</td><td style="border: 1px solid black;">120,000</td><td style="border: 1px solid black;">${wi*0.6}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">6</td><td style="border: 1px solid black;">키보드</td><td style="border: 1px solid black;">80,000</td><td style="border: 1px solid black;">${ki*0.6}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td style="border: 1px solid black;">7</td><td style="border: 1px solid black;">마우스</td><td style="border: 1px solid black;">50,000</td><td style="border: 1px solid black;">${ma*0.6}</td></tr>`
+                    list +=`<tr style="border: 1px solid black;"><td colspan="2" style="border: 1px solid black;">합계</td><td style="border: 1px solid black;">6,050,000</td><td></td></tr>`
+                    list +=`</table>`
+                document.close() 
+                document.write(list)
+            } 
+
+          
+
+        </script>
+</head>
+<body>
+<!-- let list = ''
+    list +=`<table>`
+    list +=`<tr><td colspan="4">판매품목</td></tr>`
+    list +=`<tr><th>No.</th><th>품목</th><th>정가</th><th>할인율</th></tr>`
+    list +=`<tr><td>1</td><td>컴퓨터</td><td>800,000</td><td>${}</td></tr>`
+    list +=`<tr><td>2</td><td>노트북</td><td>2,200,000</td><td>${}</td></tr>`
+    list +=`<tr><td>3</td><td>태블릿</td><td>800,000</td><td>${}</td></tr>`
+    list +=`<tr><td>4</td><td>스마트폰</td><td>2,000,000</td><td>${}</td></tr>`
+    list +=`<tr><td>5</td> <td>공유기</td><td>120,000</td><td>${}</td></tr>`
+    list +=`<tr><td>6</td><td>키보드</td><td>80,000</td><td>${}</td></tr>`
+    list +=`<tr><td>7</td><td>마우스</td><td>50,000</td><td>${}</td></tr>`
+    list +=`<tr><td colspan="2">합계</td><td>6,050,000</td><td></td></tr>`
+    list +=`</table>` -->
+
+    <button onclick="dc1()" style="background-color: rgb(255, 53, 53); width: 100px;">10%</button>
+    <button onclick="dc2()" style="background-color: rgb(245, 100, 47); width: 100px;">20%</button>
+    <button onclick="dc3()" style="background-color: rgb(255, 255, 0); width: 100px;">30%</button>
+    <button onclick="dc4()" style="background-color: rgb(78, 199, 78); width: 100px;">40%</button>
+</body>
+</html>

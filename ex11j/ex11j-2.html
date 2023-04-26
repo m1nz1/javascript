@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // toral() 이라는 함수를 만들어라. 
+        // 기능은 매개변수 a,b를 넣으면
+        // a부터b까지 값을 더하게 하라 그리고 리턴한다.
+
+        //아무값도 넣지 않으면 자동으로 1부터 10까지의 합을 리터한다.
+
+
+        function toral(a,b){
+
+            let output = 0
+            for(let i=a;i<=b;i++){
+                output+=i
+            }
+            if(Boolean(a)==false && Boolean(b)== false){
+                for(let j=1;j<=10;j++){
+                    output+=j
+                }
+            }
+            return output
+        }
+            console.log(toral(2,10)) // 54
+            console.log(toral()) // 55
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
