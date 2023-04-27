@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const sum = function(a,b){
+            let total = 0;
+            for(let i=a; i<=b; i++){
+                total = total + i // total += i   <줄이면 
+            }
+            return total
+        }
+        let a = prompt('시작값을 넣으시오.',1)*1
+        let b = prompt('끝값을 넣으시오.',10)*1
+        console.log(a,b)
+
+        // console.log(sum(prompt('시작값을 넣으시오.',1)*1,prompt('끝값을 넣으시오.',10)*1))  < 이렇게도 가능
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개변수</title>
+    <script>
+        //매개변수 4개를 넣었을때
+        //그중 가장 작은 수를 리턴하여라.
+        // min(77,22,3,44) =>> 3
+        
+
+        //최솟값
+        function min(a, b, c, d) {
+         let a1 = 0
+          const arr = [a, b, c, d];
+         for (let i = 1; i < arr.length; i++) {
+            if (arr[i] < a1) {
+             a1 = arr[i];
+          }
+      }
+         return a1;
+    }
+        console.log(min(2, 5, 1, 6));
+        
+        //최대값
+        function max(a, b, c, d) {
+            let a1 = 0
+            const arr = [a, b, c, d];
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > a1) {
+                a1 = arr[i];
+        }
+     }
+            return a1;
+    }
+
+console.log(max(2, -1, 7, 3));
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
