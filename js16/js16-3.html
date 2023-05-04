@@ -12,30 +12,18 @@
         //함수화 하기.
 
 
-
         //글자길이가 5글자 이상만 뽑아서 새로운 배열에 넣으세요.
-        // let fr = ['apple','pear','watermelon','melon','peach','strawberry','mango','banana','kiwi','grape','orange','mandarin']
-        // const frt = fr.filter(function(value){
-        //     return value.length >=5
-        // })
-        // console.log(frt)
+        let fr = ['apple','pear','watermelon','melon','peach','strawberry','mango','banana','kiwi','grape','orange','mandarin']
+        const frt =fr.filter(function(value){
+            return value.length >=5
+        })
+        console.log(frt)
 
-
-
-
+         //글자길이가 긴 순서대로 나열하세요.
+        frt.sort((a,b)=>(b.length-a.length))
+        console.log(frt)
 
         
-        const fr = ['apple','pear','watermelon','melon','peach','strawberry','mango','banana','kiwi','grape','orange','mandarin']
-        const fr2 = []
-        function frs(a){
-            for(i=0;i<fr.length;i++){
-                if(fr[i].length >= a){
-                    fr2.push(fr[i])
-                }
-            }
-            return console.log(fr2)
-        }
-        frs(7)
     </script>
 </head>
 <body>
