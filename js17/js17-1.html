@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       const nInput = prompt('몇 번째까지 상승할까요?',6)*1
+       const tInput = prompt('몇 초간격으로 상승할까요?',1)*1
+        let ct = 0
+        const tid = setInterval(()=>{document.close();document.write(`<h1>${++ct}초 입니다.</h1> <div style=" width: 200px; height: 200px; border-radius: 100px;></div>`)},tInput*1000)
+            setTimeout(()=>{
+
+            clearInterval(tid) //멈춘다
+            document.write(`<h1 style="color:red">목표값 ${nInput}가 되었습니다!!!!</h1> <div style="background-color: red; width: 200px; height: 200px; border-radius: 100px;"></div>`)},nInput*tInput*1000)
+    </script>
+</head>
+<body>
+
+</body>
+</html>1
+2
