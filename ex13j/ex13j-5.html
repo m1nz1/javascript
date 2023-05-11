@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-        //['apple','pear','watermelon','melon''peach','strawberry','mango','banana','kiwi','grape','orange','mandarin']
-        //글자길이가 5글자 이상만 뽑아서 새로운 배열에 넣으세요.
-        //글자길이가 긴 순서대로 나열하세요.
-        //함수화 하기.
+      //['apple','pear','watermelon','melon''peach','strawberry','mango','banana','kiwi','grape','orange','mandarin']
+      //글자길이가 5글자 이상만 뽑아서 새로운 배열에 넣으세요.
+      //글자길이가 긴 순서대로 나열하세요.
+      //함수화 하기.
 
+      //글자길이가 5글자 이상만 뽑아서 새로운 배열에 넣으세요.
+      // let fr = ['apple','pear','watermelon','melon','peach','strawberry','mango','banana','kiwi','grape','orange','mandarin']
+      // const frt = fr.filter(function(value){
+      //     return value.length >=5
+      // })
+      // console.log(frt)
 
-
-        //글자길이가 5글자 이상만 뽑아서 새로운 배열에 넣으세요.
-        // let fr = ['apple','pear','watermelon','melon','peach','strawberry','mango','banana','kiwi','grape','orange','mandarin']
-        // const frt = fr.filter(function(value){
-        //     return value.length >=5
-        // })
-        // console.log(frt)
-
-
-
-
-
-        
-        const fr = ['apple','pear','watermelon','melon','peach','strawberry','mango','banana','kiwi','grape','orange','mandarin']
-        const fr2 = []
-        function frs(a){
-            for(i=0;i<fr.length;i++){
-                if(fr[i].length >= a){
-                    fr2.push(fr[i])
-                }
-            }
-            return console.log(fr2)
+      const fr = [
+        "apple",
+        "pear",
+        "watermelon",
+        "melon",
+        "peach",
+        "strawberry",
+        "mango",
+        "banana",
+        "kiwi",
+        "grape",
+        "orange",
+        "mandarin",
+      ];
+      const fr2 = [];
+      function frs(a) {
+        for (i = 0; i < fr.length; i++) {
+          if (fr[i].length >= a) {
+            fr2.push(fr[i]);
+          }
         }
-        frs(7)
+        return console.log(fr2);
+      }
+      frs(7);
     </script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>
