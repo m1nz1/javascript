@@ -6,15 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
+      //   document.addEventListener("DOMContentLoaded", () => {
+      //     const header = document.querySelectorAll("h1");
+      //     for (let i = 0; i < header.length; i++) {
+      //         header[i].innerHTML = `<em>${i + 1}<em>`;
+      //       if (i % 2 ==0 ) {
+      //         header[i].style.color = "red";
+      //       } else {
+      //         header[i].style.color = "blue";
+      //       }
+      //     }
+      //   });
+
       document.addEventListener("DOMContentLoaded", () => {
         const header = document.querySelectorAll("h1");
         for (let i = 0; i < header.length; i++) {
-          if (i % 2 ==0 ) {
-            header[i].style.color = "red";
+          header[i].innerHTML = `<mark><em>${i + 1}<em></mark>`;
+          if (i % 2 == 0) {
+            header[i].querySelector("mark").style.color = "red";
           } else {
-            header[i].style.color = "blue";
+            header[i].querySelector("mark").style.color = "blue";
           }
-          header[i].innerHTML = `${i + 1}`;
         }
       });
     </script>
