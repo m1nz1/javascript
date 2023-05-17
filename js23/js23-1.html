@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+
+            const heders = document.querySelectorAll('h1') // 태그이름 요소로
+            heders.forEach((heders)=>{
+                //텍스트와 스타일 변경
+                heders.textContent = 'HEADERS'
+                heders.style.color = 'white'
+                heders.style.backgroundColor = 'black'
+                heders.style.padding = '10px'
+            
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+</body>
+</html>

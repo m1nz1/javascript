@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+        let ct = 0
+
+        const h1 = document.createElement('h1')
+        const btnst = document.createElement('button')
+        const btnsp = document.createElement('button')
+        const p = document.createElement('p')
+
+        document.body.append(h1,btnst,btnsp,p)
+        h1.style.userSelect = 'none'
+        h1.textContent = '클릭횟수 : 0'
+        btnst.textContent = '이벤트연결'
+        btnsp.textContent = '이벤트종료'
+
+        const fn = () => (h1.innerHTML = `클릭횟수 : ${ct++}`) 
+        btnst.addEventListener('click',()=>{
+            h1.addEventListener('click',fn)
+            btnst.innerHTML = '이벤트 연결중'
+            btnsp.innerHTML = '이벤트 종료'
+            p.innerHTML ='이벤트 연결 상태 : 연결중'
+        })
+        btnsp.addEventListener('click',()=>{
+            h1.removeEventListener('click',fn)
+            btnst.innerHTML = '이벤트 연결'
+            btnsp.innerHTML = '이벤트 종료됨'
+            p.innerHTML ='이벤트 연결 상태 : 종료됨 '
+        })
+       })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
