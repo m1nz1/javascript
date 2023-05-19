@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* input 으로 숫자(원화)를 입력받아서 ex) 3달러
+         환전 버튼을 클립하면 *1300 
+         원화로 변환해서 보여줘라 ex) 3600원  */
+
+         document.addEventListener('DOMContentLoaded',()=>{
+            
+            
+         
+            const input = document.getElementById('input') // <input type="text" id="input">
+            const button = document.getElementsByTagName('button')  // [<button>환전</button>]
+            const p = document.getElementsByTagName('p') // [<p></p>]
+
+            button[0].addEventListener('click',()=>{
+                const dl = Number(input.value)
+                if(!isNaN(dl)){   
+                const wn = dl * 1300
+                const num1 = 123456789
+                const test = num1.toLocaleString('ko-KR')
+                p[0].textContent = `${dl}달러를 환전하시면 ${wn}원 입니다.`} // <p></p> [0]
+             
+            })
+         })
+    </script>
+</head>
+<body>
+    <label for="input" style="font-weight: 700; color: blueviolet; ">달러를 입력하세요:</label>
+    <input type="text" id="input" style="border-color: blueviolet;">
+    <button style="border-color: blueviolet; color: black; background-color: blueviolet;">환전</button>
+    <p style="font-weight: 900; color: rgb(229, 142, 255); font-size: 2em;"></p>
+</body>
+</html>
