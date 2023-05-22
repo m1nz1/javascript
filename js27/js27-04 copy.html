@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할 일 목록</title>
+    <script>
+     document.addEventListener('DOMContentLoaded',() =>{
+        /* DOM 구성*/
+        const input = document.createElement('input')
+        const button = document.createElement('#button')
+        const h1 = document.createElement('h1')
+
+        document.body.append(h1,input,button)
+        h1.innerHTML = '할 일 목록'
+        input.setAttribute('id','tdy')
+        input.style.height = '30px'
+        input.style.marginRight = '10px'
+        ck.innerHTML = '추가하기'
+
+        /* 입력한 부분 변수로 받기 */
+        let content = ''
+        input.addEventListener('change',(e)=>{
+            content =e.target.value;
+            
+        })
+     })
+    </script>
+</head>
+<body>
+  
+
+</body>
+</html>

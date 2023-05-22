@@ -5,25 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+  
     <script>
         document.addEventListener('DOMContentLoaded',()=>{
-            const input = document.querySelector('input')
+            const input1 = document.querySelector('#a1')
             const button = document.querySelector('button')
-            const p = document.querySelector('p')
+            const input2 = document.querySelector('#a2')
 
             button.addEventListener('click',()=>{
-                const m = parseFloat(input.value);
+                const m = parseFloat(input1.value);
                 if (!isNaN(m)) {
                 const cm = m * 100
-                p.textContent = `${m} m는 ${cm}cm입니다.`
+                input2.value = `${cm}cm`
             }
             })
         })
     </script>
 </head>
 <body>
-    <input type="text"> m <br>
-    <button>계산</button>
-    <p></p>
+   <p  style=" display: inline-block; width:400px; height:100px; border: 10px solid rgb(134, 134, 134); padding: 50px;">
+    <input type="text" id="a1" style=" width:120px;height:50px">
+    <select> <option> 인치 </option> <option>미터</option></select>
+    <input type="text" id="a2"  style="display: inline-block;  width:120px; height:50px">
+    <button style="display: inline-block;  width:100px; height:55px" >계산</button>
+   </p>
 </body>
 </html>
