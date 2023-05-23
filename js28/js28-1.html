@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>할 일 목록</title>
+    <style>
+      .check-ok {
+        text-decoration: line-through;
+        color: gray;
+      }
+      .check-no {
+        text-decoration: none;
+        color: #000;
+      }
+      button{
+        width: 80px;
+        height: 50px;
+        background-color: rgb(124, 183, 242);
+        border: 3px solid rgb(186, 216, 255);
+        margin: 10px;
+        font-weight: bold;
+      }
+      input{
+        border:  3px solid rgb(124, 183, 242);
+        background-color: rgb(186, 216, 255);
+      }
+      h1{
+        text-align: center;
+        color: rgb(78, 139, 246);
+      }
+     
+      
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        /* DOM 구성*/
+        const input = document.createElement("input");
+        const button = document.createElement("button");
+        const button2 = document.createElement("button");
+        const h1 = document.createElement("h1");
+
+        document.body.append(h1, input, button, button2);
+        h1.innerHTML = "할 일 목록";
+        input.setAttribute("id", "tdy");
+        input.style.height = "40px";
+        input.style.width = "300px";
+        input.style.marginRight = "10px";
+        button.innerHTML = "추가하기";
+        button2.innerHTML = "모두삭제";
+
+        /* 입력한 부분 변수로 받기 */
+        let content = "";
+        input.addEventListener("change", (e) => {
+          content = e.currentTarget.value;
+        });
+        /* 동작 1단계 */
+        ct = 0;
+        button.addEventListener("click", (e) => {
+          if (content) {
+            ct++;
+            const div = document.createElement("div");
+            const check = document.createElement("input");
+            const span = document.createElement("span");
+            const inbutton = document.createElement("button");
+            const delbutton = document.createElement("button2");
+
+            document.body.append(div);
+            div.append(check, span, inbutton, delbutton);
+            inbutton.innerHTML = "삭제하기";
+
+            // check.setAttribute("class", "ct++");
+            check.className = ct++;
+
+            check.setAttribute("type", "checkbox");
+            span.innerHTML = content;
+            input.value = ""; // 입력하고 추가하기를 누르면 한번만 추가 되고 글이 사라짐 (보여지는것)
+            content = ""; // 입력하고 추가하기를 누르면 한번만 추가 되고 더이상 추가가 안됌. (안보여지는것) // 위 랑 같이 써줄것
+
+            /* 체크 방법 1*/
+            // check.addEventListener('change',(e)=>{
+            //   if(e.currentTarget.checked){
+            //   span.style.textDecoration = 'line-through'
+            //   }else{
+            //     span.style.textDecoration = 'none'
+            //   }
+            // })
+
+            /* 체크 방법2 */
+            check.addEventListener("change", (e) => {
+              if (e.currentTarget.checked) {
+                span.className = "check-ok";
+              } else {
+                span.className = "check-no";
+              }
+            });
+
+            inbutton.addEventListener("click", (e) => {
+              document.body.removeChild(div);
+            });
+          } else {
+            alert("내용을 입력해주세요");
+          }
+     
+  
+
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
