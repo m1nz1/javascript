@@ -7,9 +7,52 @@
     <title>할 일 목록</title>
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <style>
-      h1 {
+      .container {
+        background-color: rgb(214, 233, 254);
+        padding: 20px;
+        width: 400px;
+        margin: 0 auto;
+      }
+
+      .container h1 {
         color: rgb(78, 139, 246);
         animation: moveText 2s linear infinite;
+      }
+
+      .container span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        overflow: hidden;
+        white-space: normal; /* 줄 바꿈 허용 */
+        word-break: break-all;
+      }
+
+      .container input[type="checkbox"] {
+        transform: scale(1.5); /* 체크 박스 크기 조정 */
+      }
+
+      .container button {
+        width: 75px;
+        height: 50px;
+        background-color: rgb(124, 183, 242);
+        border: 3px solid rgb(186, 216, 255);
+        margin: 10px;
+        font-weight: bold;
+      }
+
+      .container button:active {
+        background-color: #68b1ff; /* 클릭 시 배경색 변경 */
+      }
+
+      .container input {
+        border: 3px solid rgb(124, 183, 242);
+        background-color: rgb(186, 216, 255);
+      }
+
+      .container div {
+        background-color: rgb(214, 233, 254);
       }
 
       @keyframes moveText {
@@ -23,87 +66,47 @@
           transform: translateX(0);
         }
       }
-      .check-ok {
-        text-decoration: line-through;
-        color: rgb(0, 30, 255);
-      }
-      .check-no {
-        text-decoration: none;
-        color: #000;
-      }
-      button {
-        width: 80px;
-        height: 50px;
-        background-color: rgb(124, 183, 242);
-        border: 3px solid rgb(186, 216, 255);
-        margin: 10px;
-        font-weight: bold;
-      }
-      button:active {
-        background-color: #68b1ff; /* 클릭 시 배경색 변경 */
-      }
-      input {
-        border: 3px solid rgb(124, 183, 242);
-        background-color: rgb(186, 216, 255);
-      }
-      h1 {
-        color: rgb(78, 139, 246);
-      }
-      div {
-        background-color: rgb(214, 233, 254);
-      }
-      .inbutton {
-        text-decoration: none;
-      }
-
-      input[type="checkbox"] {
-        transform: scale(1.5); /* 체크 박스 크기 조정 */
-      }
-      span {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 20px;
-        overflow: hidden;
-        white-space: normal; /* 줄 바꿈 허용 */
-        word-break: break-all;
-      }
-      body {
-        background-color: rgb(173, 223, 255);
-        margin: 0 auto;
-        width: 400px;
-      }
     </style>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         /* DOM 구성*/
+        const container = document.createElement("div");
+        const h1 = document.createElement("h1");
         const input = document.createElement("input");
         const button = document.createElement("button");
         const button2 = document.createElement("button");
-        const h1 = document.createElement("h1");
         const todoList = document.createElement("div");
 
         new TypeIt(h1)
-          .pause(1000) //1초 기다림
-          .delete(6, { delay: 1000 }) // 1초 기다렸다 6글자 삭제
-          .type(" 나의 할 일 목록 ") // 타이핑
+          .pause(3000) //1초 기다림
+          .delete(4, { delay: 1000 }) // 1초 기다렸다 4글자 삭제
+          .type(" 민지의 할 일 목록 ") // 타이핑
           .go(); // 실행
 
+        document.body.appendChild(container);
+        container.appendChild(h1);
+        container.appendChild(input);
+        container.appendChild(button);
+        container.appendChild(button2);
+        container.appendChild(todoList);
 
-        document.body.append(h1, input, button, button2, todoList);
+        container.className = "container";
         h1.innerHTML = "할 일 목록";
         input.setAttribute("id", "tdy");
         input.style.height = "40px";
-        input.style.width = "150px";
+        input.style.width = "180px";
         input.style.marginRight = "10px";
         button.innerHTML = "추가하기";
         button2.innerHTML = "모두삭제";
 
         /* 입력한 부분 변수로 받기 */
         let content = "";
+        let arr = localStorage.getItem('arr1')?.split(',')?? []
+        
         input.addEventListener("change", (e) => {
           content = e.currentTarget.value;
         });
+
         /* 동작 1단계 */
         let ct = 0;
         button.addEventListener("click", (e) => {
@@ -115,29 +118,20 @@
             const inbutton = document.createElement("button");
             const delbutton = document.createElement("button2");
 
-            document.body.append(div);
-            div.append(check, span, inbutton, delbutton);
-            todoList.append(div);
+            container.appendChild(div);
+            div.appendChild(check);
+            div.appendChild(span);
+            div.appendChild(inbutton);
+            div.appendChild(delbutton);
+            todoList.appendChild(div);
             inbutton.innerHTML = "삭제하기";
 
-            // check.setAttribute("class", "ct++");
             check.className = ct++;
-
             check.setAttribute("type", "checkbox");
             span.innerHTML = content;
-            input.value = ""; // 입력하고 추가하기를 누르면 한번만 추가 되고 글이 사라짐 (보여지는것)
-            content = ""; // 입력하고 추가하기를 누르면 한번만 추가 되고 더이상 추가가 안됨. (안보여지는것) // 위 랑 같이 써줄것
+            input.value = "";
+            content = "";
 
-            /* 체크 방법 1*/
-            // check.addEventListener('change',(e)=>{
-            //   if(e.currentTarget.checked){
-            //   span.style.textDecoration = 'line-through'
-            //   }else{
-            //     span.style.textDecoration = 'none'
-            //   }
-            // })
-
-            /* 체크 방법2 */
             check.addEventListener("change", (e) => {
               if (e.currentTarget.checked) {
                 span.className = "check-ok";
@@ -157,6 +151,7 @@
             alert("내용을 입력해주세요");
           }
         });
+
         button2.addEventListener("click", () => {
           todoList.innerHTML = "";
         });
