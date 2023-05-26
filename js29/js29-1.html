@@ -38,7 +38,7 @@
         height: 50px;
         background-color: rgb(124, 183, 242);
         border: 3px solid rgb(186, 216, 255);
-        margin: 10px;
+        margin: 5px;
         font-weight: bold;
       }
 
@@ -52,7 +52,12 @@
       }
 
       .container div {
-        background-color: rgb(214, 233, 254);
+ 
+        border: 1px solid rgb(124, 183, 242);
+
+      }
+      .container div:nth-child(even) {
+        background-color: rgb(124, 183, 242);
       }
 
       @keyframes moveText {
@@ -94,15 +99,14 @@
         h1.innerHTML = "할 일 목록";
         input.setAttribute("id", "tdy");
         input.style.height = "40px";
-        input.style.width = "180px";
-        input.style.marginRight = "10px";
+        input.style.width = "220px";
         button.innerHTML = "추가하기";
         button2.innerHTML = "모두삭제";
 
         /* 입력한 부분 변수로 받기 */
         let content = "";
-        let arr = localStorage.getItem('arr1')?.split(',')?? []
-        
+        let arr = localStorage.getItem("arr1")?.split(",") ?? [];
+
         input.addEventListener("change", (e) => {
           content = e.currentTarget.value;
         });
