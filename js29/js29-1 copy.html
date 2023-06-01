@@ -94,10 +94,11 @@
       container.appendChild(todoList);
 
       container.className = "container";
-      h1.innerHTML = "할 일 목록";
       input.setAttribute("id", "tdy");
       input.style.height = "40px";
       input.style.width = "220px";
+      
+      h1.innerHTML = "할 일 목록";
       button.innerHTML = "추가하기";
       button2.innerHTML = "모두삭제";
 
@@ -131,10 +132,12 @@
           span.innerHTML = content;
           input.value = "";
           content = "";
+       
 
           check.addEventListener("change", (e) => {
             if (e.currentTarget.checked) {
               span.className = "check-ok";
+              localStorage.setItem("arr1",arr);
             } else {
               span.className = "check-no";
             }
@@ -143,22 +146,24 @@
           inbutton.addEventListener("click", (e) => {
             if (check.checked) {
               div.remove();
+              localStorage.setItem("arr1",arr);
             } else {
               alert("할 일을 체크한 후에 삭제할 수 있습니다.");
             }
           });
 
           arr.push(content);
-          localStorage.setItem("arr1", arr.join(","));
+          localStorage.setItem("arr1",arr);
         } else {
           alert("내용을 입력해주세요");
         }
+        
       });
 
       button2.addEventListener("click", () => {
         todoList.innerHTML = "";
         arr = [];
-        localStorage.removeItem("arr1");
+        localStorage.setItem("arr1",arr);
       });
     });
   </script>

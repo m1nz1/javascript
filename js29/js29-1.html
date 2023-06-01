@@ -7,59 +7,6 @@
     <title>할 일 목록</title>
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <style>
-      .container {
-        background-color: rgb(214, 233, 254);
-        padding: 20px;
-        width: 400px;
-        margin: 0 auto;
-      }
-
-      .container h1 {
-        color: rgb(78, 139, 246);
-        animation: moveText 2s linear infinite;
-      }
-
-      .container span {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 20px;
-        overflow: hidden;
-        white-space: normal; /* 줄 바꿈 허용 */
-        word-break: break-all;
-      }
-
-      .container input[type="checkbox"] {
-        transform: scale(1.5); /* 체크 박스 크기 조정 */
-      }
-
-      .container button {
-        width: 75px;
-        height: 50px;
-        background-color: rgb(124, 183, 242);
-        border: 3px solid rgb(186, 216, 255);
-        margin: 5px;
-        font-weight: bold;
-      }
-
-      .container button:active {
-        background-color: #68b1ff; /* 클릭 시 배경색 변경 */
-      }
-
-      .container input {
-        border: 3px solid rgb(124, 183, 242);
-        background-color: rgb(186, 216, 255);
-      }
-
-      .container div {
- 
-        border: 1px solid rgb(124, 183, 242);
-
-      }
-      .container div:nth-child(even) {
-        background-color: rgb(124, 183, 242);
-      }
-
       @keyframes moveText {
         0% {
           transform: translateX(0);
@@ -72,15 +19,17 @@
         }
       }
     </style>
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         /* DOM 구성*/
-        const container = document.createElement("div");
         const h1 = document.createElement("h1");
         const input = document.createElement("input");
-        const button = document.createElement("button");
-        const button2 = document.createElement("button");
-        const todoList = document.createElement("div");
+        const but = document.createElement("button");
+        const but2 = document.createElement("button");
+        const ctr = document.createElement("div");
+
+        /* h1 애니메이션 */
 
         new TypeIt(h1)
           .pause(3000) //1초 기다림
@@ -88,77 +37,46 @@
           .type(" 민지의 할 일 목록 ") // 타이핑
           .go(); // 실행
 
-        document.body.appendChild(container);
-        container.appendChild(h1);
-        container.appendChild(input);
-        container.appendChild(button);
-        container.appendChild(button2);
-        container.appendChild(todoList);
+        /* // h1 애니메이션 */
 
-        container.className = "container";
+        document.body.append(h1, input, ctr, but, but2);
+
         h1.innerHTML = "할 일 목록";
-        input.setAttribute("id", "tdy");
-        input.style.height = "40px";
-        input.style.width = "220px";
-        button.innerHTML = "추가하기";
-        button2.innerHTML = "모두삭제";
+        but.innerHTML = "추가";
+        but2.innerHTML = "모두삭제";
 
-        /* 입력한 부분 변수로 받기 */
-        let content = "";
-        let arr = localStorage.getItem("arr1")?.split(",") ?? [];
+       
+        let arr = localStorage.getItem('arr1')?.split(',')?? []
+        let ctt = "";
 
-        input.addEventListener("change", (e) => {
-          content = e.currentTarget.value;
+        input.addEventListener("keyup", (e) => {
+          ctt = e.currentTarget.value;
         });
 
-        /* 동작 1단계 */
-        let ct = 0;
-        button.addEventListener("click", (e) => {
-          if (content) {
-            ct++;
-            const div = document.createElement("div");
-            const check = document.createElement("input");
-            const span = document.createElement("span");
-            const inbutton = document.createElement("button");
-            const delbutton = document.createElement("button2");
-
-            container.appendChild(div);
-            div.appendChild(check);
-            div.appendChild(span);
-            div.appendChild(inbutton);
-            div.appendChild(delbutton);
-            todoList.appendChild(div);
-            inbutton.innerHTML = "삭제하기";
-
-            check.className = ct++;
-            check.setAttribute("type", "checkbox");
-            span.innerHTML = content;
+        /* 추가 */
+        but.addEventListener("click", (e) => {
+          if (ctt) {
+            arr.push(ctt);
+            tod.innerHTML = arr;
+            ctt = "";
             input.value = "";
-            content = "";
-
-            check.addEventListener("change", (e) => {
-              if (e.currentTarget.checked) {
-                span.className = "check-ok";
-              } else {
-                span.className = "check-no";
-              }
-            });
-
-            inbutton.addEventListener("click", (e) => {
-              if (check.checked) {
-                div.remove();
-              } else {
-                alert("할 일을 체크한 후에 삭제할 수 있습니다.");
-              }
-            });
+            localStorage.setItem("arr1", arr);
           } else {
-            alert("내용을 입력해주세요");
+            alert("할 일을 적어주세요");
           }
+          
         });
 
-        button2.addEventListener("click", () => {
-          todoList.innerHTML = "";
+        /* 모두 삭제 */
+        but2.addEventListener("click", () => {
+          arr.length = 0; //arr = []
+          tod.innerHTML = arr;
+          ctt = ""; // 값을추가 하면 글이 사라지지 않지만 더이상 추가가 되지 않음
+          input.value = ""; // 글이 사라진다.   같이쓰기!
+          localStorage.setItem("arr1", arr);
         });
+        
+
       });
     </script>
   </head>

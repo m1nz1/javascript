@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Rectangle {
+            constructor(width,height){
+                this.width = width
+                this.height = height
+
+            }
+            getperimeter(){
+                return 2 ** (this.width+this.height)
+            }
+            getArea(){
+                return this.width * this.height
+            }
+        }
+
+        const rec1 = new Rectangle(20,10)
+        const rec2 = new Rectangle(30,20)
+        console.log('rec1 의 둘레:', rec1.getperimeter())
+        console.log('rec1 의 넓이:', rec1.getArea())
+        console.log('rec2 의 둘레:', rec2.getperimeter())
+        console.log('rec2 의 넓이:', rec2.getArea())
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
