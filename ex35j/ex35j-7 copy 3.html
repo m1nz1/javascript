@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클로저 3</title>
+    <script>
+        function init(){
+      const span = document.querySelector("span");
+      let count = 0;
+
+      setInterval(() => {
+        span.textContent = count
+      },1000);
+      function reset(){
+        count = 0
+        span.textContent = count
+      }
+      return { reset }//{ reset : reset }
+    }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
